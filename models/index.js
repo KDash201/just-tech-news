@@ -11,6 +11,7 @@ User.hasMany(Post, {
 
 Post.belongsTo(User, {
   foreignKey: "user_id",
+  onDelete: "SET NULL",
 });
 
 User.belongsToMany(Post, {
